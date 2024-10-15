@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "bunbun",
+	"version": "${version}",
+	"name": "bunbun",
+	"description": "Improving and expanding on Rabbits!",
+	"authors": [
+		"bunten"
+	],
+	"contact": {
+		"sources": "https://github.com/lunarbunten/enderscape",
+		"issues": "https://github.com/lunarbunten/enderscape/issues"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.bunbun.curseforge": "https://www.curseforge.com/minecraft/mc-mods/enderscape",
+				"modmenu.bunbun.modrinth": "https://modrinth.com/mod/enderscape"
+			}
+		}
+	},
+	"license": "MIT",
+	"icon": "assets/bunbun/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.bunten.bunbun.Bunbun"
+		],
+		"client": [
+			"net.bunten.bunbun.BunbunClient"
+		]
+	},
+	"mixins": [
+		"bunbun.mixins.json",
+		{
+			"config": "bunbun.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"accessWidener": "bunbun.accesswidener"
+}
